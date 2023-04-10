@@ -135,3 +135,13 @@ body{
     font-size: 1.2em;
     color: var(--color-text-secondary);
 }
+
+@media screen and (max-width:800px) {
+    #bio > #info {
+        flex-direction: column;
+    }
+
+    #links{
+        flex-direction: column;
+    }
+}
