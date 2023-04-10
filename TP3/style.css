@@ -1,0 +1,137 @@
+:root{
+    --color-card: #2c3856;
+    --color-background: #1a243d;
+    --color-background-transparency: rgba(26,36,81,.8);
+    --color-text-primary: #E5E5E5;
+    --color-text-secondary: #AFACAC;
+    --color-accent: #f97575;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+html{
+    background-color: var(--color-background);
+    font-size: 14px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(var(--color-background-transparency), var(--color-background-transparency)),url('./img/background.svg');
+    height: 100vh;
+    width: 100vw;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+#interview, #bio{
+    display: flex;
+    flex-direction: column;
+    gap: 2.15em;
+    width: 100%;
+    max-width: 1280px;
+}
+
+#interview > h1,
+#bio > h2{
+    position: relative;
+    color: var(--color-accent);
+    padding-left: .2em;
+    font-size: 3.5em;
+}
+
+#interview > h1::after,
+#bio > h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 1px;
+    background-color: var(--color-accent);
+}
+
+#interview{
+    margin-bottom: 5%;
+}
+
+#bio > h2{
+    font-size: 2.5em;
+}
+
+.question,
+#bio > #info{
+    padding: 1.4em;
+    background-color: var(--color-card);
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+    color: var(--color-text-primary);
+}
+
+#bio > #info{
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+#profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile > img{
+    border-radius: 100%;
+    height: 200px;
+    margin-bottom: 1.5em;
+}
+
+#profile > span{
+    font-size: 1.5em;
+}
+
+#info > #contact{
+    padding: 2em 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#links{
+    display: flex;
+    gap: 1.5em;
+}
+
+#links > a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 80px;
+}
+
+#links > a > img{
+    width: 64px;  
+    margin-bottom: 1em;
+}
+
+
+#contact > h2{
+    margin-bottom: 1.5em;
+}
+
+.question__title{
+    margin-bottom: .5em;
+    font-size: 1.4em;
+}
+
+.question__answer{
+    font-size: 1.2em;
+    color: var(--color-text-secondary);
+}
