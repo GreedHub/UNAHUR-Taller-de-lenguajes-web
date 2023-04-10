@@ -143,5 +143,6 @@ body{
 
     #links{
         flex-direction: column;
+        align-items: center;
     }
 }
