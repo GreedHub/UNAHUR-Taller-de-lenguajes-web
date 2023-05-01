@@ -1,0 +1,97 @@
+:root{
+    --color-title-background: #000;
+    --color-accent: #F8E218;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto';
+}
+
+
+#title{
+    text-align: center;
+    color: var(--color-accent);
+    background-color: var(--color-title-background);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#title h1{
+    font-size: 2.5em;
+}
+
+img{
+    width: 200px; 
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: 100% 0;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+
+#teams{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    height: calc(100vh - 127px);
+    box-sizing: border-box;
+}
+
+#rebel,
+#empire{
+    background-color: #381010;
+    color: white;
+    padding-top: 20px;
+    width: 50vw;
+    box-sizing: border-box;
+}
+
+
+#rebel{
+    background-color: #334e30;
+}
+
+#rebel > h2,
+#empire > h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+#rebel > ul,
+#empire > ul{
+ list-style: none;   
+}
+
+#rebel > ul li,
+#empire > ul  li{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+}
+
+#rebel > ul > li,
+#empire > ul > li{
+    align-items: center;
+}
+
+#rebel > ul > li:first-child,
+#empire > ul > li:first-child{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#empire h2{
+
+}
+
+.apoyo > ul{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 2em;
+}
+
+
