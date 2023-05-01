@@ -1,0 +1,5 @@
+aside{
+    background-color: var(--color-aside-background);
+    padding: 20px;
+    box-sizing: border-box;
+}
