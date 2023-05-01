@@ -1,0 +1,40 @@
+header{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    background-color: var(--color-header-background);
+    padding: 0 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+header #title{
+    display: flex;
+    align-items: center;
+        gap: 10px
+}
+
+header #title img{
+    height: 30px;
+}
+
+header #title{
+    font-size: 1.3em;
+}
+
+
+header nav{
+    display: flex;
+    gap: 10px;
+}
+
+header #title,
+header nav a{
+    color: var(--color-text-inverted);
+    text-decoration: none;
+}
+
+header nav a:hover{
+    color: var(--color-accent);
+}
