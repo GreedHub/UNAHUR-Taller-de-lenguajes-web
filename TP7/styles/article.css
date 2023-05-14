@@ -1,0 +1,59 @@
+main{
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+h1{
+    margin: 1em 0;
+}
+
+.strong{
+    font-weight: bold;
+}
+
+.green-italic{
+    color: green;
+    font-style: italic;
+}
+
+.inverted{
+    background-color: var(--color-header-background);
+    color: var(--color-text-inverted);
+}
+
+p{
+    line-height: 120%;
+}
+
+blockquote{
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+ul{
+    margin-left: 30px;
+}
+
+ul li{
+    list-style-image: url('../img/dog-bone.png');
+}
+
+section#table{
+    margin: 2em 0;
+}
+
+section#table td{
+    padding: .2em 1.2em;
+}
+
+section h3{
+    margin: 1em 0;
+}
+
+section h4{
+    margin-bottom: 1em;
+}
+
+.strike{
+    text-decoration: line-through;
+}
