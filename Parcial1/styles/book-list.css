@@ -1,5 +1,7 @@
 #banner{
     background-image:  url("../img/header-bg.svg"),linear-gradient(180deg,#060852,#185b99);
+    background-repeat: no-repeat;
+
     width: 100vw;
     height: 500px;
 }
@@ -29,12 +31,13 @@ aside label{
 }
 
 #lista-libros{
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     box-sizing: border-box;
+
 }
 
 .libro{
@@ -44,7 +47,6 @@ aside label{
     padding: 2rem;
     border-radius: 10px;
     display: grid;
-    gap:15px;
     grid-template-columns: 1fr 6fr 4fr;
     grid-template-rows: 20px 1fr;
     grid-template-areas: "imagen titulo genero"
@@ -54,6 +56,7 @@ aside label{
 .libro__imagen{
     grid-area: imagen;
     height: 150px;
+    margin-right: 2rem;
 }
 
 .libro__titulo{
@@ -75,4 +78,17 @@ aside label{
 #filtro-generos{
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width:800px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside {
+        margin-bottom: 20px;
+        width: 90%;
+        max-width: 1000px;
+    }
 }
