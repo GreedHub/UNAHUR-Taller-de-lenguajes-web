@@ -1,0 +1,41 @@
+#lista-libros{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.libro{
+    width: 80%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    grid-template-rows: 20px 1fr;
+    grid-template-areas: "imagen titulo genero"
+                         "imagen descripcion descripcion";
+}
+
+.libro__imagen{
+    grid-area: imagen;
+    height: 150px;
+}
+
+.libro__titulo{
+    grid-area: titulo;
+}
+
+.libro__genero{
+    grid-area: genero;
+    text-align: right;
+}
+
+.libro__descripcion{
+    grid-area: descripcion;
+    display: flex;
+    align-items: center;
+}
