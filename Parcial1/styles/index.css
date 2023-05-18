@@ -26,7 +26,6 @@
     margin-bottom: 50px;
 }
 #banner article a{
-    text-decoration: none;
     color: var(--color-text-inverted)
 }
 
