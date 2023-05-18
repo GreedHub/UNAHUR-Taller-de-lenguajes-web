@@ -92,7 +92,7 @@ function ActualizarLibros(){
     CargarLibros(genero)
 }
 
-function CargarLibros(genero=""){
+function CargarLibros(genero="todos"){
     libros.forEach((libro)=>{
         if(genero.toLowerCase() !== "todos" && libro.genero !== genero) 
             return

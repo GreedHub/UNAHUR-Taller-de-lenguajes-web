@@ -16,11 +16,13 @@
 
 .libro{
     width: 80%;
+    max-width: 1000px;
     background-color: var(--color-background-card);
     padding: 2rem;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 2fr 6fr 4fr;
+    gap:15px;
+    grid-template-columns: 1fr 6fr 4fr;
     grid-template-rows: 20px 1fr;
     grid-template-areas: "imagen titulo genero"
                          "imagen descripcion descripcion";
