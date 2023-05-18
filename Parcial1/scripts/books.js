@@ -2,12 +2,6 @@ document.addEventListener("DOMContentLoaded",ActualizarLibros);
 
 const libros =  [
     {
-        "nombre": "1984",
-        "descripcion": "Una novela distópica que presenta un mundo totalitario donde el gobierno controla todos los aspectos de la vida de las personas.",
-        "imagen": "1984.jpg",
-        "genero": "Ficción distópica"
-    },
-    {
         "nombre": "Orgullo y prejuicio",
         "descripcion": "Una historia de amor y clases sociales en la Inglaterra del siglo XIX, escrita por Jane Austen.",
         "imagen": "orgullo-y-prejuicio.jpg",
