@@ -121,6 +121,10 @@ function CrearLibro(libro){
     const imagen = document.createElement("img")
     const descripcion = document.createElement("p")
     const genero = document.createElement("span")
+    const linkImagen = document.createElement("a")
+
+    linkImagen.setAttribute("href",`./img/libros/${libro.imagen}`)
+    linkImagen.setAttribute("target","_blank")
 
     titulo.innerText = libro.nombre
     descripcion.innerHTML = libro.descripcion
@@ -134,7 +138,9 @@ function CrearLibro(libro){
     imagen.classList.add("libro__imagen")
     genero.classList.add("libro__genero")
 
-    _libro.appendChild(imagen)
+    linkImagen.appendChild(imagen)
+
+    _libro.appendChild(linkImagen)
     _libro.appendChild(titulo)
     _libro.appendChild(genero)
     _libro.appendChild(descripcion)

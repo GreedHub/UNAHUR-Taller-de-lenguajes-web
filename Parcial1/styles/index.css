@@ -83,8 +83,11 @@ aside label{
                          "imagen descripcion descripcion";
 }
 
-.libro__imagen{
+.libro a{
     grid-area: imagen;
+}
+
+.libro__imagen{
     height: 150px;
     margin-right: 2rem;
 }
