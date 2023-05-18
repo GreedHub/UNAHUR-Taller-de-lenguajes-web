@@ -91,4 +91,17 @@ aside label{
         width: 90%;
         max-width: 1000px;
     }
+
+    .libro{
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "imagen titulo "
+                             "imagen genero"
+                             "imagen descripcion";
+    }
+
+    .libro__genero{
+        text-align: left;
+        margin: 10px 0;
+    }
 }
