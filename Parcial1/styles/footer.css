@@ -1,0 +1,15 @@
+footer{
+    background-color: var(--color-background-footer);
+    width: 100vw;
+    min-height: 200px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: var(--color-text-inverted);
+}
+
+footer p{
+    line-height: 1.8em;
+}

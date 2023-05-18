@@ -1,3 +1,9 @@
+#banner{
+    background-image:  url("../img/header-bg.svg"),linear-gradient(180deg,#060852 -21.12%,#185b99 111.37%);
+    width: 100vw;
+    height: 500px;
+}
+
 #lista-libros{
     width: 100vw;
     display: flex;
@@ -10,7 +16,7 @@
 
 .libro{
     width: 80%;
-    background-color: white;
+    background-color: var(--color-background-card);
     padding: 2rem;
     border-radius: 10px;
     display: grid;
@@ -38,4 +44,5 @@
     grid-area: descripcion;
     display: flex;
     align-items: center;
+    line-height: 1.5em;
 }

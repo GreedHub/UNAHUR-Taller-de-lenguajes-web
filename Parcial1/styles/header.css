@@ -1,25 +1,20 @@
 header{
-    background-image:  url("../img/header-bg.svg"),linear-gradient(180deg,#060852 -21.12%,#185b99 111.37%);
-    width: 100vw;
-    height: 500px;
-}
- 
-#header__main{
+    position: fixed;
     width: 100vw;
     height: 50px;
-    background-color: transparent;
+    background-color: var(--color-background-nav);
     padding: 5px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
 }
  
-#header__title{
+header #title{
     font-size: 1.5em;
     font-weight: bold;
 }
 
-#header__title img{
+header #title img{
     height: 30px;
     margin-right: 5px;
 }
@@ -30,13 +25,13 @@ nav{
     gap: 10px;
 }
 
-#header__title,
+header #title,
 nav{
     display: flex;
     align-items: center;
 }
 
-#header__title,
+header #title,
 nav a{
     text-decoration: none;
     color: var(--color-text-inverted);

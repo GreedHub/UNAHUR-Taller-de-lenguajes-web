@@ -75,12 +75,12 @@ function CargarLibros(){
 
 function AgregarLibro(libro,id){
     const lista = document.getElementById('lista-libros')
-    const _libro = CrearElementoLibro(libro,id)
+    const _libro = CrearLibro(libro,id)
 
     lista.appendChild(_libro)
 }
 
-function CrearElementoLibro(libro,id){
+function CrearLibro(libro,id){
     const _libro = document.createElement("div")
     const titulo = document.createElement("h3")
     const imagen = document.createElement("img")
