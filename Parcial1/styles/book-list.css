@@ -141,8 +141,10 @@ aside label{
 
     #banner section{
         margin: 0;
+        padding: 5%;
         flex-direction: column;
         align-items: center;
+        
     }
 
     #banner h1{
