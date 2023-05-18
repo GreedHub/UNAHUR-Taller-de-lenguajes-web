@@ -77,6 +77,10 @@ function ObtenerGeneros(){
     },[])
 }
 
+function ObtenerLibros(){
+    return libros
+}
+
 function ObtenerGeneroSeleccionado(){
     const seleccionado = document.querySelector("input[name='filtro-generos-radio']:checked")
     return seleccionado ? seleccionado.value : "todos"

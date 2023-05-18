@@ -1,9 +1,39 @@
 #banner{
+    margin-top: 50px;
     background-image:  url("../img/header-bg.svg"),linear-gradient(180deg,#060852,#185b99);
     background-repeat: no-repeat;
-
+    color: var(--color-text-inverted);
     width: 100vw;
     height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#banner section{
+    display: flex;
+    margin-left: 32%;
+    margin-right: 5%;
+    box-sizing: border-box;
+}
+
+#banner img{
+    height: 300px;
+}
+
+#banner h1{
+    margin-left: 15%;
+    margin-bottom: 50px;
+}
+#banner article a{
+    text-decoration: none;
+    color: var(--color-text-inverted)
+}
+
+#banner article p,
+#banner article span,
+#banner article h2{
+    padding: 20px;
 }
 
 main{
@@ -103,5 +133,20 @@ aside label{
     .libro__genero{
         text-align: left;
         margin: 10px 0;
+    }
+
+    #banner{
+        height: 700px;
+    }
+
+    #banner section{
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #banner h1{
+        margin-left:0;
+        text-align: center;
     }
 }
