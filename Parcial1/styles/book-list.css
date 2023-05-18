@@ -1,5 +1,5 @@
 #banner{
-    background-image:  url("../img/header-bg.svg"),linear-gradient(180deg,#060852 -21.12%,#185b99 111.37%);
+    background-image:  url("../img/header-bg.svg"),linear-gradient(180deg,#060852,#185b99);
     width: 100vw;
     height: 500px;
 }
@@ -45,4 +45,9 @@
     display: flex;
     align-items: center;
     line-height: 1.5em;
+}
+
+#filtro-generos{
+    display: flex;
+    flex-direction: column;
 }
