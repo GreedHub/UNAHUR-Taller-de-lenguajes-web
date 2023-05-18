@@ -4,13 +4,36 @@
     height: 500px;
 }
 
+main{
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+aside{
+    background-color: var(--color-background-card);
+    padding: 2em;
+    border-radius: 10px;
+    box-sizing: border-box;
+    min-width: 300px;
+}
+
+aside #filtro-generos{
+    margin-top: 5px;
+}
+
+aside label{
+    margin-left: 5px;
+    line-height: 1.5rem;
+}
+
 #lista-libros{
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 20px 0;
     box-sizing: border-box;
 }
 
