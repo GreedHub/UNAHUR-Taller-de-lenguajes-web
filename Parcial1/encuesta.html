@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/default.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/encuesta.css">
     <title>Reviewers - Parcial</title>
 </head>
 <body>
@@ -24,7 +25,119 @@
     </header>
 
     <main >
-        En construcción
+        <section>
+            <form action="#">
+                <div>
+                  <label for="nombre" class="input-title">Nombre:</label><br>
+                  <input type="text" id="nombre" name="nombre" required>
+                </div>
+              
+                <div>
+                  <label for="correo" class="input-title">Correo electrónico:</label><br>
+                  <input type="email" id="correo" name="correo" required>
+                </div>
+              
+                <div>
+                  <label for="edad" class="input-title">Edad:</label><br>
+                  <input type="number" id="edad" name="edad" required>
+                </div>
+              
+                <div>
+                  <label for="genero" class="input-title">Género:</label><br>
+                  <select type="select" id="genero" name="genero" required>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                    <option value="Masculino">Prefiero no decir</option>
+                  </select>
+                </div>
+              
+                <div>
+                  <label class="input-title">¿Recomendarías este libro?</label>
+                  <div>
+                    <input type="radio" id="recomendar-si" name="recomendar" value="si">
+                    <label for="recomendar-si">Sí</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="recomendar-no" name="recomendar" value="no">
+                    <label for="recomendar-no">No</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="recomendar-talvez" name="recomendar" value="talvez">
+                    <label for="recomendar-talvez">Tal vez</label>
+                  </div>
+                </div>
+              
+                <div>
+                  <label class="input-title">Géneros favoritos:</label>
+                  <div>
+                    <input type="checkbox" id="genero-romantica" name="generos" value="romantica">
+                    <label for="genero-romantica">Novela romántica</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-juvenil" name="generos" value="juvenil">
+                    <label for="genero-juvenil">Juvenil</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-infantil" name="generos" value="infantil">
+                    <label for="genero-infantil">Infantil</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-drama" name="generos" value="drama">
+                    <label for="genero-drama">Drama</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-thriller" name="generos" value="thriller">
+                    <label for="genero-thriller">Thriller</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-desarrollo" name="generos" value="desarrollo">
+                    <label for="genero-desarrollo">Novela de desarrollo personal</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-aventura" name="generos" value="aventura">
+                    <label for="genero-aventura">Aventura</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-fantasia" name="generos" value="fantasia">
+                    <label for="genero-fantasia">Fantasía</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-realismo_magico" name="generos" value="realismo_magico">
+                    <label for="genero-realismo_magico">Realismo mágico</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="genero-clasico" name="generos" value="clasico">
+                    <label for="genero-clasico">Clásico</label>
+                  </div>
+                </div>
+              
+                <div>
+                  <label for="libro-favorito" class="input-title">Libro favorito:</label> <br>
+                  <input type="text" id="libro-favorito" name="libro-favorito" list="libros-disponibles">
+                  <datalist id="libros-disponibles">
+                    <option value="1984"></option>
+                    <option value="Orgullo y prejuicio"></option>
+                    <option value="Harry Potter y la piedra filosofal"></option>
+                    <option value="El principito"></option>
+                    <option value="Matar a un ruiseñor"></option>
+                    <option value="El código Da Vinci"></option>
+                    <option value="El alquimista"></option>
+                    <option value="Los juegos del hambre"></option>
+                    <option value="El señor de los anillos"></option>
+                    <option value="Crónica de una muerte anunciada"></option>
+                    <option value="Don Quijote de la Mancha"></option>
+                  </datalist>
+                </div>
+              
+                <div>
+                  <label for="opinion" class="input-title">Opinión:</label> <br>
+                  <textarea id="opinion" name="opinion" rows="4" required></textarea>
+                </div>
+              
+                <button type="submit">Enviar</button>
+              </form>
+        </section>
     </main>  
     <footer>
         <p>Esta página fue creada por <strong>Lucas Julián Güerci</strong>, <i>DNI 38.457.009</i> con fines academicos, como parte del primer parcial de la materia <u>Taller de lenguajes de marcado y tecnologías web</u>, <b>comisión 3</b>, en el primer cuatrimestre de 2023.</p>
