@@ -1,0 +1,13 @@
+main{
+    display: flex;
+    margin-top: 50px;
+}
+
+#videos{
+    display: flex;
+    gap: 0 20px
+}
+
+#videos iframe{
+    width: 40%;
+}
