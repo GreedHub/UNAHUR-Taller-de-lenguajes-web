@@ -22,6 +22,7 @@ blockquote{
     padding: 1.5em;
     margin: 1em 0;
     position: relative;
+    z-index: -1;
 }
 
 blockquote #referencia{
