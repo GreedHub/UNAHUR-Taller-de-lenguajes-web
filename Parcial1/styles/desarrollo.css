@@ -4,10 +4,11 @@ main{
     box-sizing: border-box;
     margin-top: 50px;
     padding: 50px 5vw;
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: auto minmax(auto,800px) 5vw minmax(auto,800px) auto;
     grid-template-rows: 50px auto;
-    grid-template-areas: "image title"
-                         "image content";
+    grid-template-areas: "blank image space title blank2"
+                         "blank image space content blank2";
+
 }
 
 main article{
@@ -32,13 +33,12 @@ blockquote #referencia{
 
 main > img{
     grid-area: image;
-    width: 30vw;
-    margin-right: 5vw;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
 }
 
-main article > h1{
+main > h1{
     grid-area: title;
 }
 
