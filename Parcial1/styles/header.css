@@ -4,7 +4,7 @@ header{
     width: 100%;
     height: 50px;
     background-color: var(--color-background-nav);
-    padding: 5px;
+    padding: 0 20px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@ header #title{
 
 header #title img{
     height: 28px;
-    margin: 0 15px 0 10px;
+    margin-right: 15px;
 }
 
 nav{
@@ -37,4 +37,10 @@ header #title,
 nav a{
     text-decoration: none;
     color: var(--color-text-inverted);
+}
+
+@media screen and (max-width: 800px) {
+    header{
+        padding: 0 10px ;
+    }
 }
