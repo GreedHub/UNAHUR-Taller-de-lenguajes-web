@@ -1,6 +1,73 @@
 main{
-    display: flex;
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
     margin-top: 50px;
+    padding: 50px 5vw;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 50px auto;
+    grid-template-areas: "image title"
+                         "image content";
+background-color: transparent;
+
+}
+
+main article{
+    grid-area: content;
+}
+
+blockquote{
+    background-color: #e5e5e5;
+    border-radius: var(--radius);
+    font-size: 1.2em;
+    padding: 1.5em;
+    margin: 1em 0;
+}
+
+blockquote #referencia{
+    margin-left: 75%;
+    font-size: .8em;
+}
+
+main > img{
+    grid-area: image;
+    width: 30vw;
+    margin-right: 5vw;
+    box-sizing: border-box;
+    display: flex;
+}
+
+main article > h1{
+    grid-area: title;
+}
+
+section{
+    margin-bottom: 2em;
+}
+
+#resenia p{
+    margin: 1em 0;
+}
+
+article > section > h3{
+    margin: 1em 0 .5em 0;
+}
+
+table{
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+}
+
+td,th{
+   padding: 10px;
+   border: solid 1px black; 
+   text-align: left;
+}
+
+ul,ol{
+    margin-left: 2em;
+    line-height: 1.5em;
 }
 
 #videos{
@@ -9,5 +76,34 @@ main{
 }
 
 #videos iframe{
-    width: 40%;
+    width: 50%;
+    aspect-ratio: 16/9;
+}
+
+@media screen and (max-width: 800px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr auto;
+        grid-template-areas:"title"
+                            "image"
+                            "content";
+    }
+
+    main > img{
+        width: 80%;
+        margin: 0 10% 2em 10%;
+    }
+    
+    h1{
+        text-align: center;
+    }
+
+    #videos{
+        flex-direction: column;
+        gap: 20px 0;
+    }
+
+    #videos iframe{
+        width: 100%;
+    }
 }
