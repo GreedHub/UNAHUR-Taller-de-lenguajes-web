@@ -1,0 +1,26 @@
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var( --color-background-header);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header a{
+    color: var(--color-text-inverted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav{
+    display: flex;
+    gap: 20px;
+}
