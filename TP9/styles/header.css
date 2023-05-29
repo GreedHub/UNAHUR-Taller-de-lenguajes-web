@@ -4,9 +4,6 @@ header{
     left: 0;
     right: 0;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: var( --color-background-header);
     padding: 0 20px;
     box-sizing: border-box;
@@ -20,11 +17,16 @@ header a{
 }
 
 header img{
-    height: 50px;
+    float: left;
+    vertical-align: middle;
+    height: 100%;
+    max-width: 20%;
     margin-right: 10px;
 }
 
 header nav{
+    float: right;
     display: flex;
     gap: 20px;
+    height: 100%;
 }
