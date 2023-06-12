@@ -1,0 +1,42 @@
+.menu__seccion {
+    background-color: var(--color-background-card);
+    padding: 2em;
+    border-radius: var(--radius);
+    margin: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0
+}
+
+
+.seccion__titulo{
+    text-transform: capitalize;
+}
+
+.seccion__platos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.plato{
+    display: grid;
+    width: 400px;
+    flex-grow: 1;
+    border: solid 1.5px var(--color-separador);
+    padding: 20px;
+    border-radius: var(--radius);
+    position: relative;
+}
+
+.plato__nombre{
+    margin-bottom: 1em;
+}
+
+
+.plato__precio{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/comentarios.js"></script>
+    <link rel="stylesheet" href="./styles/bootstrap.css" />
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/default.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <title>TP11</title>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" id="title"> El blog de CSS </a>
+      <nav>
+        <a href="./index.html">Inicio</a>
+        <a href="#">Desventajas de Bootstrap</a>
+      </nav>
+    </header> 
+
+    <aside>
+      <h5>Menú:</h5>
+      <ul>
+        <li>
+          <a href="#intro">Introducción</a>
+        </li>
+        <li>
+          <a href="#desventajas">Desventajas del uso de Bootstrap</a>
+        </li>
+        <li>
+          <a href="#alternativas">¿Qué usamos en lugar de Bootstrap?</a>
+        </li>
+        <li>
+          <a href="#conclusion">Conclusión</a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <div id="carousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./img/1.jpg"
+              class="d-block w-100"
+              alt="imagen-carrusel-memes-1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/2.jpg"
+              class="d-block w-100"
+              alt="imagen-carrusel-memes-2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/3.jpg"
+              class="d-block w-100"
+              alt="imagen-carrusel-memes-3"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/4.jpg"
+              class="d-block w-100"
+              alt="imagen-carrusel-memes-4"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h1 id="intro">
+        Por qué no deberías usar Bootstrap en 2023
+      </h1>
+
+      <article>
+        <section>
+          <p>
+            En el mundo del desarrollo web, siempre hay nuevas tendencias y
+            tecnologías emergentes que cambian la forma en que diseñamos y
+            construimos nuestros sitios. A medida que nos adentramos en el año
+            2023, es importante analizar las herramientas y frameworks que
+            utilizamos, y cuestionar si siguen siendo la mejor opción. Uno de
+            esos frameworks que ha sido ampliamente utilizado en el pasado es
+            Bootstrap. Sin embargo, en este artículo, vamos a discutir por qué
+            no deberías seguir utilizando Bootstrap en 2023 y explorar algunas
+            alternativas más modernas y flexibles.
+          </p>
+         </section>
+
+         <section id="desventajas">
+          <h3>Desventajas del uso de Bootstrap</h3>
+          <ul>
+            <li>
+              <h5>Falta de originalidad y personalización:</h5>
+              Bootstrap se ha vuelto tan popular que muchos sitios web terminan
+              luciendo y sintiéndose similares. Esto se debe a que Bootstrap
+              ofrece una serie de componentes y estilos predefinidos que se
+              utilizan ampliamente en la comunidad de desarrollo web. Si deseas
+              que tu sitio web se destaque y tenga una identidad única,
+              Bootstrap puede limitarte en términos de originalidad y
+              personalización.
+            </li>
+            <li>
+              <h5>Sobrecarga de etiquetas y clases:</h5>
+              Bootstrap utiliza una gran cantidad de clases y etiquetas en su
+              estructura, lo que puede llevar a un código HTML más pesado y
+              difícil de leer. Esto puede dificultar la comprensión y
+              personalización del código, especialmente cuando se busca
+              modificar estilos específicos de los componentes.
+            </li>
+            <li>
+              <h5>Estilos genéricos:</h5>
+              Bootstrap proporciona estilos predeterminados para sus
+              componentes, lo que puede resultar en una apariencia uniforme y
+              poco distintiva para los sitios web. Si buscas una estética más
+              única y personalizada, puede resultar difícil lograrlo con los
+              estilos predefinidos de Bootstrap.
+            </li>
+            <li>
+              <h5>Dificultad para personalizar:</h5>
+              Aunque Bootstrap ofrece opciones de personalización, modificar los
+              estilos de los componentes puede ser complicado debido a la
+              complejidad y la interdependencia de las clases y etiquetas
+              utilizadas. Esto puede resultar en una falta de flexibilidad para
+              adaptar los componentes a tus necesidades específicas.
+            </li>
+            <li>
+              <h5>Dependencia de archivos adicionales:</h5>
+              Para utilizar Bootstrap en su totalidad, es necesario cargar
+              varios archivos CSS y JavaScript adicionales. Esto puede afectar
+              negativamente el rendimiento del sitio web, ya que se deben
+              realizar múltiples solicitudes de archivos adicionales al
+              servidor.
+            </li>
+            <li>
+              <h5>Aumento de la curva de aprendizaje:</h5>
+              Si bien Bootstrap puede ser fácil de comenzar a utilizar gracias a
+              su documentación y ejemplos, dominar completamente todas las
+              características y clases disponibles puede llevar tiempo. Esto
+              puede retrasar el desarrollo y dificultar la resolución de
+              problemas específicos.
+            </li>
+            <li>
+              <h5>Redundancia de estilos:</h5>
+              A veces, Bootstrap puede generar estilos redundantes que pueden
+              entrar en conflicto con las reglas de estilo personalizadas. Esto
+              puede resultar en la necesidad de utilizar el selector !important
+              de CSS en exceso para anular los estilos de Bootstrap, lo que
+              dificulta aún más la personalización y el mantenimiento del
+              código.
+            </li>
+            <li>
+              <h5>Actualizaciones y compatibilidad:</h5>
+              Con cada nueva versión de Bootstrap, pueden surgir cambios
+              significativos en las clases y estructura del framework. Esto
+              puede hacer que las actualizaciones sean complicadas y consumir
+              tiempo adicional para adaptar los sitios web existentes a las
+              nuevas versiones.
+            </li>
+          </ul>
+         </section>
+
+          <section id="alternativas">
+            <h3>¿Qué usamos en lugar de Bootstrap?</h3>
+            <p>
+              CSS Grid y Flexbox. Estas características nativas de CSS te permiten
+              crear diseños responsivos y flexibles sin necesidad de un framework
+              adicional.
+            </p>
+          </section>
+
+          <section id="conclusion">
+            <h3>Conclusión</h3>
+            <p>
+              Si bien Bootstrap ha sido una herramienta popular en el pasado, en
+              2023 es importante explorar nuevas alternativas que nos brinden
+              mayor originalidad, personalización y rendimiento. Podemos
+              aprovechar las características nativas de CSS y construir sitios web
+              únicos y de calidad. El uso de herramientas nativas, como Grid y
+              Flexbox, nos permiten crear diseños personalizados sin la sobrecarga
+              de etiquetas y clases de Bootstrap. Además, al evitar la dependencia
+              de archivos adicionales y reducir la complejidad del código, podemos
+              mejorar el rendimiento y la eficiencia de nuestros sitios web.
+            </p>
+        </section>
+      </article>
+
+        <form id="agregar-comentario">
+          <h2>Comentarios</h2>
+          <h5>Dejanos tu comentario</h5>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="nombre">
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Example textarea</label>
+            <textarea class="form-control" id="mensaje" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <br>
+        <h5>Comentarios anteriores</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Comentario</th>
+            </tr>
+          </thead>
+          <tbody id="comentarios">
+            
+          </tbody>
+        </table>
+
+      
+    </main>
+
+    
+
+    <footer>
+      <p>
+        Esta página fue creada por <strong>Lucas Julián Güerci</strong>, con
+        fines academicos, como parte del TP de la semana 11 de la materia
+        <u>Taller de lenguajes de marcado y tecnologías web</u>,
+        <b>comisión 3</b>, en el primer cuatrimestre de 2023.
+      </p>
+    </footer>
+  </body>
+</html>

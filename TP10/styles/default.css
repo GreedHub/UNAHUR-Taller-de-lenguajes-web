@@ -1,0 +1,36 @@
+:root{
+    --color-background: #F4EAE4;
+    --color-background-header:#BE9A70;
+    --color-background-footer: #BE9A70;
+    --color-background-card:#fff;
+    --color-text: #3c3c3c;
+    --color-text-inverted: #f0f0f0;
+    --color-separador: #ebebeb;
+    --radius: 5px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--color-background);
+    display: grid;
+    grid-template-columns: auto minmax(auto,1500px) auto;
+    grid-template-rows: 60px 8fr 150px;
+    grid-template-areas: "header header header"
+                         "blank  main   blank2"
+                         "footer footer footer";
+}
+
+main{
+    grid-area: main;
+    padding: 2em 20px;
+}
