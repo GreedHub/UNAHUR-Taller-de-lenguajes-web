@@ -1,0 +1,17 @@
+section{
+    margin: 1em 0;
+    box-sizing: border-box;
+}
+
+section h3{
+    margin: .5em 0;
+    box-sizing: border-box;
+
+}
+
+article img{
+    margin-bottom: 2em;
+    width: 100%;
+    box-sizing: border-box;
+
+}
