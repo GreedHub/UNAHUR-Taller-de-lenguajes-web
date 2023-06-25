@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./styles/default.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="./scripts/tema.js"></script>
+    <script src="./scripts/admin.js"></script>
+    <script src="./scripts/busqueda.js"></script>
+    <title>TP13</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" id="title"> El blog de CSS </a>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="./bootstrap.html">Bootstrap</a>
+        <a href="#" id="cambiar-tema">🌙</a>
+      </nav>
+    </header>
+
+    <aside>
+      <h5 id="admin">
+        Bienvenido administrador: <span id="admin__nombre"></span>
+      </h5>
+      <form action="#" id="busqueda">
+        <h5>Buscar en Google</h5>
+        <div class="campos">
+          <input type="text" name="buscar" id="buscar" placeholder="Ingrese el texto a buscar">
+          <input type="submit" value="Buscar">
+        </div>
+      </form>
+      <h5>Menú:</h5>
+      <ul>
+        <li>
+          <a href="#intro">Introducción</a>
+        </li>
+        <li>
+          <a href="#grid">CSS Grid</a>
+        </li>
+        <li>
+          <a href="#flex">Flexbox</a>
+        </li>
+        <li>
+          <a href="#combo">Combinando Grid y Flexbox</a>
+        </li>
+        <li>
+          <a href="#conclusion">Conclusión</a>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <article>
+        <img src="./img/grid-vs-flexbox-1.webp" alt="img-grid-flexbox" />
+        <h1 id="intro">
+          Grid y Flexbox: La mejor forma de hacer el layout de una página web en
+          2023
+        </h1>
+        <section>
+          <p>
+            En el mundo del desarrollo web, el diseño y la estructura de una
+            página web juegan un papel fundamental en la experiencia del
+            usuario. A medida que avanzamos en el año 2023, es esencial explorar
+            las mejores prácticas y tecnologías actuales para lograr diseños
+            flexibles, adaptables y visualmente atractivos. En este artículo,
+            nos sumergiremos en la combinación perfecta de CSS Grid y Flexbox,
+            dos herramientas poderosas que se han consolidado como la mejor
+            forma de crear el layout de una página web en la actualidad.
+          </p>
+        </section>
+        <section id="grid">
+          <h3>
+            CSS Grid: Un enfoque revolucionario para el diseño de páginas web
+          </h3>
+
+          <p>
+            CSS Grid es una característica de CSS que permite la creación de
+            layouts complejos de una manera más sencilla y declarativa. Con
+            Grid, podemos dividir nuestro diseño en filas y columnas, creando
+            áreas específicas para ubicar elementos. Esto nos brinda un control
+            total sobre la disposición de los elementos en la página,
+            permitiéndonos crear diseños flexibles y adaptables a diferentes
+            tamaños de pantalla. Con sus propiedades y funciones avanzadas, como
+            la creación de áreas de contenido, el ajuste automático de tamaño y
+            el posicionamiento preciso, CSS Grid nos ofrece un nivel de control
+            y flexibilidad sin precedentes.
+          </p>
+        </section>
+
+        <section id="flex">
+          <h3>
+            Flexbox: La herramienta perfecta para el posicionamiento y el
+            alineamiento
+          </h3>
+          <p>
+            Flexbox es otro módulo de CSS que se ha vuelto extremadamente
+            popular en los últimos años. Se centra en el posicionamiento y el
+            alineamiento de elementos en una sola dimensión (ya sea horizontal o
+            vertical). Con Flexbox, podemos crear fácilmente diseños responsivos
+            y adaptativos, alineando los elementos de manera automática y
+            proporcionando un flujo dinámico según el espacio disponible. Al
+            utilizar propiedades como display: flex, flex-direction,
+            justify-content y align-items, Flexbox nos permite distribuir y
+            organizar los elementos de manera eficiente, adaptándose a
+            diferentes tamaños de pantalla y dispositivos.
+          </p>
+        </section>
+        <section id="combo">
+          <h3>Combinando Grid y Flexbox para un diseño poderoso:</h3>
+          <p>
+            La verdadera magia ocurre cuando combinamos CSS Grid y Flexbox en un
+            mismo proyecto. Al aprovechar las fortalezas de ambos enfoques,
+            podemos lograr diseños complejos y sofisticados de una manera más
+            eficiente. Por ejemplo, podemos utilizar Grid para establecer el
+            esqueleto general de la página, definiendo áreas y divisiones
+            principales, mientras que Flexbox nos permite ajustar el
+            posicionamiento y el alineamiento de los elementos dentro de esas
+            áreas específicas. Esto nos brinda un control granular sobre la
+            estructura y la apariencia de nuestro diseño, al tiempo que nos
+            permite adaptarlo de forma fluida a diferentes dispositivos y
+            tamaños de pantalla.
+          </p>
+        </section>
+        <section id="conclusion">
+          <h3>Conclusión:</h3>
+          <p>
+            En 2023, CSS Grid y Flexbox se han consolidado como la mejor forma
+            de crear el layout de una página web. Al combinar la potencia y la
+            flexibilidad de ambos enfoques, podemos crear diseños versátiles,
+            adaptables y visualmente atractivos. Con CSS Grid, obtenemos un
+            control absoluto sobre la estructura y la disposición de los
+            elementos, mientras que Flexbox nos brinda una herramienta eficiente
+            para el posicionamiento y el alineamiento. Al utilizar estas
+            tecnologías en conjunto, podemos aprovechar al máximo las
+            características nativas de CSS.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        Esta página fue creada por <strong>Lucas Julián Güerci</strong>, con
+        fines academicos, como parte del TP de la semana 13 de la materia
+        <u>Taller de lenguajes de marcado y tecnologías web</u>,
+        <b>comisión 3</b>, en el primer cuatrimestre de 2023.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+body{
+    grid-template-columns: auto  minmax(auto,1500px) auto;
+    grid-template-rows: 60px 8fr 150px;
+    grid-template-areas: "header header header"
+                         "blank   main  blank2"
+                         "footer  footer footer";
+}
+
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form{
+    position: relative;
+    background-color: var(--color-background-card);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 50%;
+    border-radius: var(--radius);
+    color: var(--color-text)
+}
+
+form > h1{
+
+}
+
+form .campo{
+    display: flex;
+    flex-direction: column;
+}
+
+form .campo small{
+    display: none;
+    color: red;
+}
+
+form .campo.invalido small{
+    display: initial;
+}
+
+form .campo input,
+form input[type="submit"]{
+    padding: 1em;
+    border: solid 2px var(--color-separador);
+    border-radius: var(--radius);
+}
+
+form input[type="submit"]{
+    font-size: 1.2rem;
+}
+
+form input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+#login-form__invalido{
+    display: none;
+    position: absolute;
+    bottom: 1em;
+    left: 3.5em;
+    color: red;
+}
+
+#login-form__invalido.visible{
+    display: initial;
+}
