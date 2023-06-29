@@ -1,0 +1,71 @@
+document.addEventListener("DOMContentLoaded",CargarListeners)
+
+const usuarios = [
+    {
+        nombre: "Mirtha",
+        apellido: "Legrand",
+        usuario: "mirtita",
+        contrasenia: "123",
+        rol: "paciente",
+    },
+    {
+        nombre: "Gregory",
+        apellido: "House",
+        usuario: "house",
+        contrasenia: "123",
+        rol: "doctor",
+    }
+]
+
+function CargarListeners(){
+    AgregarValidarEmail()
+    AgregarEnviarFormulario()
+}
+
+function AgregarEnviarFormulario(){
+    const form = document.getElementById("login-form");
+    form.addEventListener("submit",EnviarFormulario)
+}
+
+function EnviarFormulario(e){
+    e.preventDefault()
+    const username = e.target.usuario.value
+    const password = e.target.contrasenia.value
+
+    const usuario = _obtenerUsuario(username,password)
+
+    if(!usuario){
+        const invalido = document.getElementById("login-form__invalido")
+        invalido.classList.add("visible")
+        return 
+    }
+
+    const {nombre,apellido} = usuario
+
+    /* 
+        !!! NO HACER ESTO EN UNA PAGINA REAL !!!
+
+        Lo que estoy haciendo a continuacion es solo por simplicidad
+        ya que es un ejercicio academico, hacer esto es un expuesto
+        enorme en la seguridad de la pagina, ya que estas enviando
+        los datos del usuario en texto plano en la URL
+    */
+    const baseUrl = _armarUrlBase()
+    const path = _esDoctor(usuario) ? 'doctor.html' : 'paciente.html'
+    const url = `${baseUrl}${path}`
+    const urlConParams = `${url}?nombre=${nombre}&apellido=${apellido}`
+    window.location.assign(urlConParams)
+}
+
+function _obtenerUsuario(username,password){
+    return usuarios.find(usuario=>usuario.usuario === username && usuario.password === password)
+}
+
+function _esDoctor(usuario){
+    return usuario.rol === "doctor"
+}
+
+function _armarUrlBase(){
+    const {protocol,host} = window.location
+    return `${protocol}//${host}/`
+}
