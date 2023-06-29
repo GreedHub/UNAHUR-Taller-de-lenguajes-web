@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",CargarListeners)
+document.addEventListener("DOMContentLoaded",CargarListenerEnviarFormulario)
 
 const usuarios = [
     {
@@ -17,12 +17,7 @@ const usuarios = [
     }
 ]
 
-function CargarListeners(){
-    AgregarValidarEmail()
-    AgregarEnviarFormulario()
-}
-
-function AgregarEnviarFormulario(){
+function CargarListenerEnviarFormulario(){
     const form = document.getElementById("login-form");
     form.addEventListener("submit",EnviarFormulario)
 }
@@ -53,7 +48,7 @@ function EnviarFormulario(e){
     const baseUrl = _armarUrlBase()
     const path = _esDoctor(usuario) ? 'doctor.html' : 'paciente.html'
     const url = `${baseUrl}${path}`
-    const urlConParams = `${url}?nombre=${nombre}&apellido=${apellido}`
+    const urlConParams = `${url}?usuario=${usuario.usuario}`
     window.location.assign(urlConParams)
 }
 
