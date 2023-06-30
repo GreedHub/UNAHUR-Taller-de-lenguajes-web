@@ -12,42 +12,61 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/login.css" />
-    <script src="./scripts/tema.js"></script>
+    <link rel="stylesheet" href="./styles/modal.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+
     <script src="./scripts/login.js"></script>
-    <title>TP13</title>
+    <script src="./scripts/modal.js"></script>
+
+    <title>Princeton-Plainsboro</title>
   </head>
   <body>
+    <div class="modal login" id="login-modal">
+      <div class="modal__content">
+        <h1 class="modal__title">Iniciar sesión</h1>
+        <form action="#" id="login-form">
+          <div class="campo">
+            <label for="usuario">Usuario</label>
+            <input type="usuario" name="usuario" id="usuario" required />
+          </div>
+          <div class="campo">
+            <label for="contrasenia">Contraseña</label>
+            <input
+              type="password"
+              name="contrasenia"
+              id="contrasenia"
+              required
+            />
+          </div>
+          <small id="login-form__invalido">Usuario incorrecto</small>
+          <input type="submit" value="Ingresar" />
+        </form>
+      </div>
+    </div>
+
     <header>
-      <a href="#" id="title"> El blog de CSS </a>
+      <div class="banner">
+        <div class="container">
+          <a href="#">
+            <img src="./img/logo.png" alt="princeton-plainsboro-logo" />
+          </a>
+        </div>
+      </div>
       <nav>
-        <a href="#">Inicio</a>
-        <a href="./bootstrap.html">Bootstrap</a>
-        <a href="#" id="cambiar-tema">🌙</a>
+        <div class="container">
+          <a href="#">Inicio</a>
+          <a href="#" onclick="AbrirModal(event,'login-modal')">Iniciar Sesion</a>
+        </div>
       </nav>
     </header>
 
-    <main>
-        <form action="#" id="login-form">
-            <h1>Acceso de administrador</h1>
-            <div class="campo">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-                <small>El valor de este campo es invalido</small>
-            </div>
-            <div class="campo">
-                <label for="contrasenia">Contraseña</label>
-                <input type="password" name="contrasenia" id="contrasenia" required>
-                <small>El valor de este campo es invalido</small>
-            </div>
-            <small id="login-form__invalido">El email o la contraseña ingresados son incorrectos</small>
-            <input type="submit" value="Ingresar">
-        </form>
-    </main>
+    <main></main>
 
     <footer>
       <p>
-        Esta página fue creada por <strong>Lucas Julián Güerci</strong>, con
-        fines academicos, como parte del TP de la semana 13 de la materia
+        Esta página fue creada por <strong>Lucas Julián Güerci</strong>,
+        <i>DNI 38.457.009</i> con fines academicos, como parte del segundo
+        parcial de la materia
         <u>Taller de lenguajes de marcado y tecnologías web</u>,
         <b>comisión 3</b>, en el primer cuatrimestre de 2023.
       </p>
