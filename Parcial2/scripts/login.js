@@ -49,9 +49,8 @@ function EnviarFormulario(e){
     */
     const path = _esDoctor(usuario) ? 'doctor.html' : 'paciente.html'
     const baseUrl = _armarUrlBase(path)
-    const url = `${baseUrl}${path}`
-    const urlConParams = `${url}?usuario=${usuario.usuario}`
-    window.location.assign(urlConParams)
+    const url = `${baseUrl}?usuario=${usuario.usuario}`
+    window.location.assign(url)
 }
 
 function _obtenerUsuario(username,password){
@@ -64,6 +63,11 @@ function _esDoctor(usuario){
 
 function _armarUrlBase(path){
     const {protocol,host, pathname} = window.location
-    const finalPath = pathname.replace(/.*\.html/g,path)
+
+    const pathArray = pathname.split('/')
+    pathArray.pop()
+    pathArray.push(path)
+    
+    const finalPath = pathArray.join('/')
     return `${protocol}//${host}${finalPath}`
 }
