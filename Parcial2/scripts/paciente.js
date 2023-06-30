@@ -3,35 +3,35 @@ document.addEventListener("DOMContentLoaded", InstanciarPaciente);
 const usuario = {
   turnos: [
     {
-      fecha: "2023-06-26",
+      fecha: "26/06/2023",
       hora: "09:00",
       especialidad: "Infectología",
       medico: "Gregory House",
       observaciones: "Consulta de seguimiento",
     },
     {
-      fecha: "2023-06-28",
+      fecha: "28/06/2023",
       hora: "14:15",
       especialidad: "Neurología",
       medico: "Eric Foreman",
       observaciones: "Evaluación de síntomas",
     },
     {
-      fecha: "2023-06-29",
+      fecha: "29/06/2023",
       hora: "10:45",
       especialidad: "Cirugía",
       medico: "Robert Chase",
       observaciones: "Consulta inicial",
     },
     {
-      fecha: "2023-06-30",
+      fecha: "30/06/2023",
       hora: "16:00",
       especialidad: "Oncología",
       medico: "James Willson",
       observaciones: "Terapia de seguimiento",
     },
     {
-      fecha: "2023-07-01",
+      fecha: "01/07/2023",
       hora: "13:30",
       especialidad: "Traumatología",
       medico: "Allison Cameron",
@@ -41,12 +41,12 @@ const usuario = {
 };
 
 function InstanciarPaciente() {
-    _cargarTurnos();
-    
+    _actualizarTurnos();
+
 }
 
 function _actualizarTurnos() {
-  const elementoTurnos = document.getElementById("turnos");
+  const elementoTurnos = document.getElementById("turnos__contenido");
 
   elementoTurnos.innerHTML = "";
 
@@ -98,7 +98,7 @@ function AlSolicitarTurno(e) {
 
   const turno = { fecha, hora, especialidad, medico, observaciones };
 
-  const elementoTurnos = document.getElementById("turnos");
+  const elementoTurnos = document.getElementById("turnos__contenido");
 
   _agregarTurno(elementoTurnos, turno);
 
