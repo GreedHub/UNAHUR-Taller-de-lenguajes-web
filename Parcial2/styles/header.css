@@ -59,6 +59,10 @@ header nav #cambiar-tema{
     color: yellow;
 }
 
+header p#saludo{
+    color: var(--color-text-inverted);
+}
+
 @media screen and (max-width:1000px){
     header > * > .container{
         padding:  0 20px;
