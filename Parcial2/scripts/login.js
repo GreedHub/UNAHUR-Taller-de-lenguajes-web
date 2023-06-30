@@ -29,6 +29,8 @@ function EnviarFormulario(e){
 
     const usuario = _obtenerUsuario(username,password)
 
+    console.log({usuario,u:{username,password}})
+
     if(!usuario){
         const invalido = document.getElementById("login-form__invalido")
         invalido.classList.add("visible")
@@ -45,22 +47,23 @@ function EnviarFormulario(e){
         enorme en la seguridad de la pagina, ya que estas enviando
         los datos del usuario en texto plano en la URL
     */
-    const baseUrl = _armarUrlBase()
     const path = _esDoctor(usuario) ? 'doctor.html' : 'paciente.html'
+    const baseUrl = _armarUrlBase(path)
     const url = `${baseUrl}${path}`
     const urlConParams = `${url}?usuario=${usuario.usuario}`
     window.location.assign(urlConParams)
 }
 
 function _obtenerUsuario(username,password){
-    return usuarios.find(usuario=>usuario.usuario === username && usuario.password === password)
+    return usuarios.find(usuario=>usuario.usuario === username && usuario.contrasenia === password)
 }
 
 function _esDoctor(usuario){
     return usuario.rol === "doctor"
 }
 
-function _armarUrlBase(){
-    const {protocol,host} = window.location
-    return `${protocol}//${host}/`
+function _armarUrlBase(path){
+    const {protocol,host, pathname} = window.location
+    const finalPath = pathname.replace(/.*\.html/g,path)
+    return `${protocol}//${host}${finalPath}`
 }

@@ -1,10 +1,13 @@
 :root{
     --color-background: #fff;
     --color-background-nav: #002345;
+    --color-background-footer: #002345;
     --color-background-modal: rgba(0,0,0,.5);
     --color-background-modal__content: #fff;
     --color-text: #3c3c3c;
+    --color-text-strong: #002345;
     --color-text-inverted: #fff;
+    --color-separador: #ebebeb;
     --radius: 0;
 }
 
@@ -21,8 +24,9 @@ body{
     color: var(--color-text);
     display: grid;
     grid-template-columns: auto minmax(auto,1500px) auto;
-    grid-template-rows: 200px 8fr 150px;
+    grid-template-rows: 200px 500px 8fr 150px;
     grid-template-areas: "header header header"
+                         "banner banner banner"
                          "blank  main   blank2"
                          "footer footer footer";
 }
@@ -30,13 +34,15 @@ body{
 main{
     grid-area: main;
     padding: 2em 40px;
+    transition: padding .5s ease-in-out;
 }
 
 @media screen and (max-width:1500px){
     body{
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 8fr 150px;
+        grid-template-rows: 200px 500px 8fr 150px;
         grid-template-areas: "header"
+                             "banner"
                              "main  "
                              "footer";
     }
