@@ -2,15 +2,10 @@ footer{
     grid-area: footer;
     background-color: var(--color-background-footer);
     color:var(--color-text-inverted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 2em;
     line-height: 1.5em;
-    position: relative;
-}
-
-
-footer p{
-    position: absolute;
-    top: 50%;
-    margin-top: -20px;
-    left: 10%;
-    right: 10%;
 }
