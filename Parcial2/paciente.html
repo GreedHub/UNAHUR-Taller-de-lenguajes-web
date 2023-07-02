@@ -12,15 +12,67 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
-    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="./styles/modal-form.css" />
     <link rel="stylesheet" href="./styles/index.css" />
 
+    <script src="./scripts/modal.js"></script>
     <script src="./scripts/saludo.js"></script>
     <script src="./scripts/paciente.js"></script>
 
     <title>Princeton-Plainsboro</title>
   </head>
   <body>
+
+    <div class="modal form" id="turno-modal">
+      <div class="modal__content">
+        <h1 class="modal__title">Solicitar turno</h1>
+        <form action="#" id="turno-form" onsubmit="AlSolicitarTurno(event)">
+          <div class="campo">
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" id="fecha" pattern="\d{2}-\m{2}-\y{4}" required />
+            <small>Formato: Mes/Día/Año</small>
+          </div>
+          <div class="campo">
+            <label for="hora">Horario</label>
+            <select name="hora" id="hora" required>
+              <option value="10:00">10:00 hs.</option>
+              <option value="11:00">11:00 hs.</option>
+              <option value="12:00">12:00 hs.</option>
+              <option value="13:00">13:00 hs.</option>
+              <option value="14:00">14:00 hs.</option>
+              <option value="15:00">15:00 hs.</option>
+              <option value="16:00">16:00 hs.</option>
+              <option value="17:00">17:00 hs.</option>
+              <option value="18:00">18:00 hs.</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="especialidad">Especialidad</label>
+            <select name="especialidad" id="especialidad" onChange="AlSeleccionarEspecialidad(event)" required>
+              <option value="Infectología">Infectología</option>
+              <option value="Neurología">Neurología</option>
+              <option value="Cirugía">Cirugía</option>
+              <option value="Oncología">Oncología</option>
+              <option value="Traumatología">Traumatología</option>
+            </select>
+            <small id="especialidad-invalido" class="campo__invalido">No es posible seleccionar esta especialidad</small>
+          </div>
+          <div class="campo">
+            <label for="profesional">Profesional</label>
+            <select name="profesional" id="profesional" required>
+              <option value="Gregory House">Gregory House</option>
+            </select>
+            <small id="profesional-invalido" class="campo__invalido">No es posible seleccionar este profesional</small>
+          </div>
+          <div class="campo">
+            <label for="observaciones">Observaciones</label>
+            <input type="text" name="observaciones" id="observaciones" required/>
+          </div>
+
+          <input type="submit" value="Solicitar" />
+        </form>
+      </div>
+    </div>
 
     
     <header>
@@ -47,18 +99,22 @@
 
       <article>
         <section>
+          <div class="header">
+            <h3>Turnos</h3>
+            <button onclick="AbrirModal(event,'turno-modal')">Solicitar turno</button>
+          </div>
           <table id="turnos">
             <thead>
               <tr>
                 <th> Fecha </th>
                 <th> Hora </th>
                 <th> Especialidad </th>
-                <th> Medico </th>
+                <th> Profesional </th>
                 <th> Observaciones </th>
+                <th> Acciones </th>
               </tr>
             </thead>
             <tbody id="turnos__contenido">
-              
             </tbody>
           </table>
         </section>

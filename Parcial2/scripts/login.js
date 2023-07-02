@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded",CargarListenerEnviarFormulario)
-
 const usuarios = [
     {
         nombre: "Mirtha",
@@ -17,12 +15,7 @@ const usuarios = [
     }
 ]
 
-function CargarListenerEnviarFormulario(){
-    const form = document.getElementById("login-form");
-    form.addEventListener("submit",EnviarFormulario)
-}
-
-function EnviarFormulario(e){
+function AlIniciarSesion(e){
     e.preventDefault()
     const username = e.target.usuario.value
     const password = e.target.contrasenia.value
@@ -32,12 +25,10 @@ function EnviarFormulario(e){
     console.log({usuario,u:{username,password}})
 
     if(!usuario){
-        const invalido = document.getElementById("login-form__invalido")
+        const invalido = document.getElementById("login-invalido")
         invalido.classList.add("visible")
         return 
     }
-
-    const {nombre,apellido} = usuario
 
     /* 
         !!! NO HACER ESTO EN UNA PAGINA REAL !!!

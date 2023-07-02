@@ -1,9 +1,9 @@
-#login-modal .modal__title{
+.modal.form .modal__title{
     color: var(--color-text-strong);
     margin-bottom: 1em;
 }
 
-#login-modal .modal__content{
+.modal.form .modal__content{
     padding: 4em;
     min-height: 40vh;
     width: 90vw;
@@ -31,7 +31,8 @@ form .campo{
 }
 
 form .campo input,
-form input[type="submit"]{
+form input[type="submit"],
+select{
     padding: 1em;
     margin-top: 1em;
     border: solid 2px var(--color-separador);
@@ -50,7 +51,8 @@ form input[type="submit"]:hover{
     cursor: pointer;
 }
 
-#login-form__invalido{
+.form__invalido,
+.campo__invalido{
     display: none;
     position: absolute;
     bottom: 75px;
@@ -59,6 +61,7 @@ form input[type="submit"]:hover{
     color: red;
 }
 
-#login-form__invalido.visible{
+.form__invalido.visible,
+.campo__invalido.visible{
     display: initial;
 }

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
-    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="./styles/modal-form.css" />
     <link rel="stylesheet" href="./styles/index.css" />
 
     <script src="./scripts/login.js"></script>
@@ -21,10 +21,10 @@
     <title>Princeton-Plainsboro</title>
   </head>
   <body>
-    <div class="modal login" id="login-modal">
+    <div class="modal form" id="login-modal">
       <div class="modal__content">
         <h1 class="modal__title">Iniciar sesión</h1>
-        <form action="#" id="login-form">
+        <form action="#" id="login-form" onsubmit="AlIniciarSesion(event)">
           <div class="campo">
             <label for="usuario">Usuario</label>
             <input type="text" name="usuario" id="usuario" required />
@@ -38,7 +38,7 @@
               required
             />
           </div>
-          <small id="login-form__invalido">Usuario incorrecto</small>
+          <small id="login-invalido" class="form__invalido">Usuario incorrecto</small>
           <input type="submit" value="Ingresar" />
         </form>
       </div>
