@@ -32,40 +32,38 @@
       </div>
       <nav>
         <div class="container">
-            <a href="./index.html">Inicio</a>
-            <p id="saludo">
-                Bienvenido/a 
-                <span id="saludo__nombre"></span>
-            </p>
+          <a href="./index.html">Inicio</a>
+          <p id="saludo">
+            Bienvenido/a
+            <span id="saludo__nombre"></span>
+          </p>
         </div>
       </nav>
     </header>
 
     <main>
-
       <article>
         <section>
           <div class="header">
             <h3>Turnos</h3>
-            <button onclick="AbrirModal(event,'turno-modal')">Solicitar turno</button>
+            <button onclick="AbrirModal(event,'turno-modal')">
+              Solicitar turno
+            </button>
           </div>
           <table id="turnos" class="desktop">
             <thead>
               <tr>
-                <th> Fecha </th>
-                <th> Hora </th>
-                <th> Especialidad </th>
-                <th> Profesional </th>
-                <th> Observaciones </th>
-                <th> Acciones </th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Especialidad</th>
+                <th>Profesional</th>
+                <th>Observaciones</th>
+                <th>Acciones</th>
               </tr>
             </thead>
-            <tbody id="turnos__contenido">
-            </tbody>
+            <tbody id="turnos__contenido"></tbody>
           </table>
-          <div id="turnos-mobile" class="mobile">
-
-          </div>
+          <div id="turnos-mobile" class="mobile"></div>
         </section>
       </article>
     </main>
@@ -76,7 +74,13 @@
         <form action="#" id="turno-form" onsubmit="AlSolicitarTurno(event)">
           <div class="campo">
             <label for="fecha">Fecha</label>
-            <input type="date" name="fecha" id="fecha" pattern="\d{2}-\m{2}-\y{4}" required />
+            <input
+              type="date"
+              name="fecha"
+              id="fecha"
+              pattern="\d{2}-\m{2}-\y{4}"
+              required
+            />
             <small>Formato: Mes/Día/Año</small>
           </div>
           <div class="campo">
@@ -95,7 +99,12 @@
           </div>
           <div class="campo">
             <label for="especialidad">Especialidad</label>
-            <select name="especialidad" id="especialidad" onChange="AlSeleccionarEspecialidad(event)" required>
+            <select
+              name="especialidad"
+              id="especialidad"
+              onChange="AlSeleccionarEspecialidad(event)"
+              required
+            >
               <option value="Infectología">Infectología</option>
               <option value="Neurología">Neurología</option>
               <option value="Cirugía">Cirugía</option>
@@ -111,7 +120,12 @@
           </div>
           <div class="campo">
             <label for="observaciones">Observaciones</label>
-            <input type="text" name="observaciones" id="observaciones" required/>
+            <input
+              type="text"
+              name="observaciones"
+              id="observaciones"
+              required
+            />
           </div>
 
           <input type="submit" value="Solicitar" />

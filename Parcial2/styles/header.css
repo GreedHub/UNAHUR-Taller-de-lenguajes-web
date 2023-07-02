@@ -1,70 +1,69 @@
-header{
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-header a{
-    color: var(--color-text-inverted);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+header a {
+  color: var(--color-text-inverted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-header a#title{
-    float: left;
-    vertical-align: middle;
-    height: 100%;
-    max-width: 200px;
-    margin-right: 10px;
+header a#title {
+  float: left;
+  vertical-align: middle;
+  height: 100%;
+  max-width: 200px;
+  margin-right: 10px;
 }
 
-header .banner{
-    display: flex;
-    align-items: center;
-    height: 140px;
+header .banner {
+  display: flex;
+  align-items: center;
+  height: 140px;
 }
 
-header .banner img{
-    background-color: var(--color-background);
-    height: 100px;
+header .banner img {
+  background-color: var(--color-background);
+  height: 100px;
 }
 
-header > * > .container{
-    display: flex;
-    width: 100%;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-    padding:  0 40px;
-    box-sizing: border-box;
-    transition: padding .5s ease-in-out;
-
+header > * > .container {
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  transition: padding 0.5s ease-in-out;
 }
 
-header nav{
-    height: 60px;
-    background-color: var(--color-background-nav);
+header nav {
+  height: 60px;
+  background-color: var(--color-background-nav);
 }
 
-header nav .container{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    gap: 20px;
+header nav .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 20px;
 }
 
-header nav #cambiar-tema{
-    color: yellow;
+header nav #cambiar-tema {
+  color: yellow;
 }
 
-header p#saludo{
-    color: var(--color-text-inverted);
+header p#saludo {
+  color: var(--color-text-inverted);
 }
 
-@media screen and (max-width:1000px){
-    header > * > .container{
-        padding:  0 20px;
-    }
+@media screen and (max-width: 1000px) {
+  header > * > .container {
+    padding: 0 20px;
+  }
 }

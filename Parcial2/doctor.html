@@ -11,17 +11,15 @@
     <link rel="stylesheet" href="./styles/default.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
-    <link rel="stylesheet" href="./styles/modal.css" />
-    <link rel="stylesheet" href="./styles/login.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/doctor.css" />
 
     <script src="./scripts/saludo.js"></script>
+    <script src="./scripts/doctor.js"></script>
+
 
     <title>Princeton-Plainsboro</title>
   </head>
   <body>
-
-    
     <header>
       <div class="banner">
         <div class="container">
@@ -32,20 +30,22 @@
       </div>
       <nav>
         <div class="container">
-            <a href="./index.html">Inicio</a>
-            <p id="saludo">
-                Bienvenido/a 
-                <span id="saludo__nombre"></span>
-            </p>
+          <a href="./index.html">Inicio</a>
+          <p id="saludo">
+            Bienvenido/a
+            <span id="saludo__nombre"></span>
+          </p>
         </div>
       </nav>
     </header>
 
     <main>
-
       <article>
         <section>
-  
+          <div class="header">
+            <h3>Turnos</h3>
+          </div>
+          <div id="turnos"></div>
         </section>
       </article>
     </main>

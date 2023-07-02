@@ -84,7 +84,7 @@ function _actualizarTurnosDesktop() {
 
 function _actualizarTurnosMobile() {
   const elementoTurnos = document.getElementById("turnos-mobile");
-  console.log({elementoTurnos})
+  console.log({ elementoTurnos });
   elementoTurnos.innerHTML = "";
 
   usuario.turnos.forEach((turno, id) =>
@@ -141,13 +141,13 @@ function _crearTurnoMobile(
   { fecha, hora, especialidad, profesional, observaciones },
   id
 ) {
-  const turno = document.createElement("details")
+  const turno = document.createElement("details");
 
-  const summary = document.createElement("summary")
-  summary.innerHTML = `${fecha} ${hora} - ${especialidad}`
+  const summary = document.createElement("summary");
+  summary.innerHTML = `${fecha} ${hora} - ${especialidad}`;
 
-  const content = document.createElement("div")
-  content.classList.add('contenido')
+  const content = document.createElement("div");
+  content.classList.add("contenido");
   content.innerHTML =
     `Fecha: ${fecha} <br>` +
     `Hora: ${hora} <br>` +
@@ -160,7 +160,7 @@ function _crearTurnoMobile(
   cancelarTurno.addEventListener("click", () => AlCancelarTurno(id));
 
   const elementoAcciones = document.createElement("div");
-  elementoAcciones.classList.add('acciones')
+  elementoAcciones.classList.add("acciones");
   elementoAcciones.appendChild(cancelarTurno);
   content.appendChild(elementoAcciones);
 
