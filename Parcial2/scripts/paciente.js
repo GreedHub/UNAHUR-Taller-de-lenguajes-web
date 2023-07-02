@@ -68,6 +68,11 @@ function InstanciarPaciente() {
 }
 
 function _actualizarTurnos() {
+  _actualizarTurnosDesktop();
+  _actualizarTurnosMobile();
+}
+
+function _actualizarTurnosDesktop() {
   const elementoTurnos = document.getElementById("turnos__contenido");
 
   elementoTurnos.innerHTML = "";
@@ -77,12 +82,27 @@ function _actualizarTurnos() {
   );
 }
 
-function _agregarTurno(elementoTurnos, turno, id) {
-  const elementoTurno = _crearTurno(turno, id);
+function _actualizarTurnosMobile() {
+  const elementoTurnos = document.getElementById("turnos-mobile");
+  console.log({elementoTurnos})
+  elementoTurnos.innerHTML = "";
+
+  usuario.turnos.forEach((turno, id) =>
+    _agregarTurno(elementoTurnos, turno, id, true)
+  );
+}
+
+function _agregarTurno(elementoTurnos, turno, id, esMobile = false) {
+  const elementoTurno = esMobile
+    ? _crearTurnoMobile(turno, id)
+    : _crearTurno(turno, id);
   elementoTurnos.appendChild(elementoTurno);
 }
 
-function _crearTurno({ fecha, hora, especialidad, profesional, observaciones }, id) {
+function _crearTurno(
+  { fecha, hora, especialidad, profesional, observaciones },
+  id
+) {
   const turno = document.createElement("tr");
 
   const elementoFecha = document.createElement("td");
@@ -117,10 +137,43 @@ function _crearTurno({ fecha, hora, especialidad, profesional, observaciones }, 
   return turno;
 }
 
+function _crearTurnoMobile(
+  { fecha, hora, especialidad, profesional, observaciones },
+  id
+) {
+  const turno = document.createElement("details")
+
+  const summary = document.createElement("summary")
+  summary.innerHTML = `${fecha} ${hora} - ${especialidad}`
+
+  const content = document.createElement("div")
+  content.classList.add('contenido')
+  content.innerHTML =
+    `Fecha: ${fecha} <br>` +
+    `Hora: ${hora} <br>` +
+    `Especialidad: ${especialidad} <br>` +
+    `Profesional: ${profesional} <br>` +
+    `Observaciones: ${observaciones} <br>`;
+
+  const cancelarTurno = document.createElement("button");
+  cancelarTurno.innerHTML = "Cancelar";
+  cancelarTurno.addEventListener("click", () => AlCancelarTurno(id));
+
+  const elementoAcciones = document.createElement("div");
+  elementoAcciones.classList.add('acciones')
+  elementoAcciones.appendChild(cancelarTurno);
+  content.appendChild(elementoAcciones);
+
+  turno.appendChild(summary);
+  turno.appendChild(content);
+
+  return turno;
+}
+
 function AlSolicitarTurno(e) {
   e.preventDefault();
 
-  const fecha = e.target.fecha.value.split('-').reverse().join('/');
+  const fecha = e.target.fecha.value.split("-").reverse().join("/");
   const hora = e.target.hora.value;
   const especialidad = e.target.especialidad.value;
   const profesional = e.target.profesional.value;
@@ -128,12 +181,12 @@ function AlSolicitarTurno(e) {
 
   const turno = { fecha, hora, especialidad, profesional, observaciones };
 
-  usuario.turnos.push(turno)
+  usuario.turnos.push(turno);
 
-  CerrarModal('turno-modal')
+  CerrarModal("turno-modal");
 
-  e.target.fecha.value = ''
-  e.target.observaciones.value = ''
+  e.target.fecha.value = "";
+  e.target.observaciones.value = "";
 
   _actualizarTurnos();
 }
@@ -158,30 +211,29 @@ function AlCancelarTurno(id) {
 }
 
 function AlSeleccionarEspecialidad(e) {
+  const espSeleccionada = e.target.value;
 
-  const espSeleccionada = e.target.value
+  const especialidad = especialidades.find((e) => e.nombre === espSeleccionada);
 
-  const especialidad = especialidades.find(e=>e.nombre === espSeleccionada)
-
-  _actualizarProfesionales(especialidad.profesionales)
+  _actualizarProfesionales(especialidad.profesionales);
 }
 
-function _actualizarProfesionales(profesionales){
-  const elementoProfesionales = document.getElementById('profesional')
-  elementoProfesionales.innerHTML = ''
-  
-  profesionales.forEach(p=>_agregarProfesional(p,elementoProfesionales))
+function _actualizarProfesionales(profesionales) {
+  const elementoProfesionales = document.getElementById("profesional");
+  elementoProfesionales.innerHTML = "";
+
+  profesionales.forEach((p) => _agregarProfesional(p, elementoProfesionales));
 }
 
-function _agregarProfesional(profesional,elementoProfesionales){
-  const elementoProfesional = _crearProfesional(profesional)
-  console.log({elementoProfesional})
-  elementoProfesionales.appendChild(elementoProfesional)
+function _agregarProfesional(profesional, elementoProfesionales) {
+  const elementoProfesional = _crearProfesional(profesional);
+  console.log({ elementoProfesional });
+  elementoProfesionales.appendChild(elementoProfesional);
 }
 
-function _crearProfesional(profesional){
-  const elementoProfesional = document.createElement('option')
-  elementoProfesional.setAttribute('value',profesional)
-  elementoProfesional.innerHTML = profesional
-  return elementoProfesional
+function _crearProfesional(profesional) {
+  const elementoProfesional = document.createElement("option");
+  elementoProfesional.setAttribute("value", profesional);
+  elementoProfesional.innerHTML = profesional;
+  return elementoProfesional;
 }

@@ -40,3 +40,7 @@ section button:hover{
     padding: .5em;
     border: solid 2px var(--color-separador);
 }
+
+.mobile details .contenido .acciones{
+    margin-top: 1em;
+}
