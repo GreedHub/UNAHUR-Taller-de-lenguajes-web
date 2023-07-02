@@ -42,6 +42,10 @@ main {
   transition: padding 0.5s ease-in-out;
 }
 
+#saludo__nombre{
+  text-transform: capitalize;
+}
+
 @media screen and (max-width: 1500px) {
   body {
     grid-template-columns: 1fr;
