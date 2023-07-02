@@ -11,14 +11,14 @@ const usuario = {
     },
     {
       fecha: "28/06/2023",
-      hora: "14:15",
+      hora: "14:00",
       especialidad: "Neurología",
       profesional: "Eric Foreman",
       observaciones: "Evaluación de síntomas",
     },
     {
       fecha: "29/06/2023",
-      hora: "10:45",
+      hora: "10:00",
       especialidad: "Cirugía",
       profesional: "Robert Chase",
       observaciones: "Consulta inicial",
@@ -32,7 +32,7 @@ const usuario = {
     },
     {
       fecha: "01/07/2023",
-      hora: "13:30",
+      hora: "13:00",
       especialidad: "Traumatología",
       profesional: "Allison Cameron",
       observaciones: "Consulta por lesión",

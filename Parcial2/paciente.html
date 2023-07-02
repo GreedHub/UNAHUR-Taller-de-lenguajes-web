@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
     <link rel="stylesheet" href="./styles/modal-form.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/paciente.css" />
 
     <script src="./scripts/modal.js"></script>
     <script src="./scripts/saludo.js"></script>
@@ -22,6 +22,50 @@
     <title>Princeton-Plainsboro</title>
   </head>
   <body>
+    <header>
+      <div class="banner">
+        <div class="container">
+          <a href="#">
+            <img src="./img/logo.png" alt="princeton-plainsboro-logo" />
+          </a>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+            <a href="./index.html">Inicio</a>
+            <p id="saludo">
+                Bienvenido/a 
+                <span id="saludo__nombre"></span>
+            </p>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <article>
+        <section>
+          <div class="header">
+            <h3>Turnos</h3>
+            <button onclick="AbrirModal(event,'turno-modal')">Solicitar turno</button>
+          </div>
+          <table id="turnos">
+            <thead>
+              <tr>
+                <th> Fecha </th>
+                <th> Hora </th>
+                <th> Especialidad </th>
+                <th> Profesional </th>
+                <th> Observaciones </th>
+                <th> Acciones </th>
+              </tr>
+            </thead>
+            <tbody id="turnos__contenido">
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </main>
 
     <div class="modal form" id="turno-modal">
       <div class="modal__content">
@@ -73,53 +117,6 @@
         </form>
       </div>
     </div>
-
-    
-    <header>
-      <div class="banner">
-        <div class="container">
-          <a href="#">
-            <img src="./img/logo.png" alt="princeton-plainsboro-logo" />
-          </a>
-        </div>
-      </div>
-      <nav>
-        <div class="container">
-            <a href="./index.html">Inicio</a>
-            <p id="saludo">
-                Bienvenido/a 
-                <span id="saludo__nombre"></span>
-            </p>
-        </div>
-      </nav>
-    </header>
-
-    <img src="./img/hero.jpg" alt="princeton-plainsboro-staff" id="banner">
-    <main>
-
-      <article>
-        <section>
-          <div class="header">
-            <h3>Turnos</h3>
-            <button onclick="AbrirModal(event,'turno-modal')">Solicitar turno</button>
-          </div>
-          <table id="turnos">
-            <thead>
-              <tr>
-                <th> Fecha </th>
-                <th> Hora </th>
-                <th> Especialidad </th>
-                <th> Profesional </th>
-                <th> Observaciones </th>
-                <th> Acciones </th>
-              </tr>
-            </thead>
-            <tbody id="turnos__contenido">
-            </tbody>
-          </table>
-        </section>
-      </article>
-    </main>
 
     <footer>
       <p>

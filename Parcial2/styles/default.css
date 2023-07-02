@@ -8,6 +8,7 @@
     --color-text-strong: #002345;
     --color-text-inverted: #fff;
     --color-separador: #ebebeb;
+    --color-accent: #5C85A1;
     --radius: 0;
 }
 
@@ -24,9 +25,8 @@ body{
     color: var(--color-text);
     display: grid;
     grid-template-columns: auto minmax(auto,1500px) auto;
-    grid-template-rows: 200px 500px 8fr minmax(150px,auto);
+    grid-template-rows: 200px 8fr minmax(150px,auto);
     grid-template-areas: "header header header"
-                         "banner banner banner"
                          "blank  main   blank2"
                          "footer footer footer";
 }
@@ -40,9 +40,8 @@ main{
 @media screen and (max-width:1500px){
     body{
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 500px 8fr minmax(150px,auto);
+        grid-template-rows: 200px 8fr minmax(150px,auto);
         grid-template-areas: "header"
-                             "banner"
                              "main  "
                              "footer";
     }

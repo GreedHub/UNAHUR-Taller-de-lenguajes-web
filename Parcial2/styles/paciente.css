@@ -1,0 +1,43 @@
+section .header{
+    background-color: var(--color-accent);
+    color: var(--color-text-inverted);
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+section .header h3{
+    letter-spacing: .1em;
+}
+
+section button{
+    background-color: var(--color-background-nav);
+    color: var(--color-text-inverted);
+    border: none;
+    padding: 1em;
+    border-radius: var(--radius);
+    font-weight: medium;
+}
+
+section button:hover{
+    cursor: pointer;
+}
+
+#turnos{
+    width: 100%;
+    margin: 2em 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+#turnos thead{
+    text-align: left;    
+}
+
+#turnos td, th{
+    padding: .5em;
+    border: solid 2px var(--color-separador);
+}

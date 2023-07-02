@@ -5,3 +5,22 @@
     grid-area: banner;
 }
 
+body{
+    grid-template-columns: auto minmax(auto,1500px) auto;
+    grid-template-rows: 200px 500px 8fr minmax(150px,auto);
+    grid-template-areas: "header header header"
+                         "banner banner banner"
+                         "blank  main   blank2"
+                         "footer footer footer";
+}
+
+@media screen and (max-width:1500px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 500px 8fr minmax(150px,auto);
+        grid-template-areas: "header"
+                             "banner"
+                             "main  "
+                             "footer";
+    }
+}
