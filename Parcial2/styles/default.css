@@ -28,33 +28,32 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   display: grid;
-  grid-template-columns: auto minmax(auto, 1500px) auto;
+  grid-template-columns: 1fr;
   grid-template-rows: 200px 8fr minmax(150px, auto);
   grid-template-areas:
-    "header header header"
-    "blank  main   blank2"
-    "footer footer footer";
+    "header"
+    "main"
+    "footer";
 }
 
 main {
   grid-area: main;
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2em 40px;
+  box-sizing: border-box;
   transition: padding 0.5s ease-in-out;
 }
 
-#saludo__nombre{
-  text-transform: capitalize;
+main article{
+  width: 100%;
 }
 
-@media screen and (max-width: 1500px) {
-  body {
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 8fr minmax(150px, auto);
-    grid-template-areas:
-      "header"
-      "main  "
-      "footer";
-  }
+#saludo__nombre {
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 1000px) {

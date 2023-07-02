@@ -6,24 +6,12 @@
 }
 
 body {
-  grid-template-columns: 1fr;
     grid-template-rows: 200px 620px 8fr minmax(150px, auto);
     grid-template-areas:
       "header"
       "banner"
       "main  "
       "footer";
-}
-
-main {
-  display: flex;
-  width: 100%;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 40px;
-  box-sizing: border-box;
-  transition: padding 0.5s ease-in-out;
 }
 
 section{
@@ -54,10 +42,6 @@ section figure{
 section figure *{
   width: 100%;
   aspect-ratio: 16/9;
-}
-
-@media screen and (max-width: 1500px) {
-
 }
 
 @media screen and (max-width: 1000px) {
