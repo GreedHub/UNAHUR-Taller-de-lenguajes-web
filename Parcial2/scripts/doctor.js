@@ -136,7 +136,7 @@ function _crearTurno(turno, root) {
 
   const elementoTitulo = document.createElement("h4");
   elementoTitulo.classList.add("turno__titulo");
-  elementoTitulo.innerHTML = turno.hora;
+  elementoTitulo.innerHTML = `${turno.hora} hs.`;
 
   const elementoContenido = document.createElement("div");
   elementoContenido.classList.add("turno__contenido");
