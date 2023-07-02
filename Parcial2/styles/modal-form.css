@@ -8,6 +8,7 @@
     min-height: 40vh;
     width: 90vw;
     max-width: 500px;
+    overflow-y: auto;
     box-sizing: border-box;
 }
 
@@ -47,6 +48,7 @@ form input[type="submit"]{
     margin-top: 2.5em;
     letter-spacing: .05em;;
     font-size: 1.2rem;
+    box-sizing: border-box;
 }
 
 form input[type="submit"]:hover{
@@ -66,4 +68,14 @@ form input[type="submit"]:hover{
 .form__invalido.visible,
 .campo__invalido.visible{
     display: initial;
+}
+
+@media screen and (max-height:800px) {
+    .modal.form .modal__content{
+        padding: 2em;
+        margin: 1em 0;
+    }    
+    form input[type="submit"]{
+        margin-top: 1em;
+    }
 }
