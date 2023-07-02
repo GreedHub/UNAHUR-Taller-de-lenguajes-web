@@ -26,6 +26,11 @@ header .banner {
   height: 140px;
 }
 
+header .banner .container{
+  display: flex;
+  justify-content: space-between;
+}
+
 header .banner img {
   background-color: var(--color-background);
   height: 100px;
@@ -65,5 +70,12 @@ header p#saludo {
 @media screen and (max-width: 1000px) {
   header > * > .container {
     padding: 0 20px;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  #header-datos{
+    display: none;
   }
 }

@@ -1,30 +1,64 @@
 #banner {
-  max-height: 100%;
   width: 100vw;
+  max-height: 620px;
   object-fit: cover;
   grid-area: banner;
 }
 
 body {
-  grid-template-columns: auto minmax(auto, 1500px) auto;
-  grid-template-rows: 200px 500px 8fr minmax(150px, auto);
-  grid-template-areas:
-    "header header header"
-    "banner banner banner"
-    "blank  main   blank2"
-    "footer footer footer";
-}
-
-@media screen and (max-width: 1500px) {
-  body {
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 500px 8fr minmax(150px, auto);
+  grid-template-columns: 1fr;
+    grid-template-rows: 200px 620px 8fr minmax(150px, auto);
     grid-template-areas:
       "header"
       "banner"
       "main  "
       "footer";
-  }
+}
+
+main {
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  transition: padding 0.5s ease-in-out;
+}
+
+section{
+  min-width: 80%;
+  display: flex;
+  margin: 10em 0;
+}
+
+section h2{
+  font-size: 1.8rem;
+  color: var(--color-text-strong)
+}
+
+section p{
+  margin: 1em 0;
+  margin-right: 2em;
+  line-height: 2.2em;
+  letter-spacing: .05em;
+}
+
+section .nota{
+  width: 50%;
+}
+
+section figure{
+  width: 50%;
+}
+
+section figure *{
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+@media screen and (max-width: 1500px) {
+
 }
 
 @media screen and (max-width: 1000px) {
