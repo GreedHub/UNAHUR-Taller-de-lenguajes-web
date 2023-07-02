@@ -1,6 +1,6 @@
 #banner {
   width: 100vw;
-  max-height: 620px;
+  height: 620px;
   object-fit: cover;
   grid-area: banner;
 }
@@ -27,7 +27,6 @@ main {
 }
 
 section{
-  min-width: 80%;
   display: flex;
   margin: 10em 0;
 }
@@ -39,15 +38,15 @@ section h2{
 
 section p{
   margin: 1em 0;
-  margin-right: 2em;
   line-height: 2.2em;
   letter-spacing: .05em;
 }
 
 section .nota{
-  width: 50%;
+  margin-right: 2em;
 }
 
+section .nota,
 section figure{
   width: 50%;
 }
@@ -64,5 +63,18 @@ section figure *{
 @media screen and (max-width: 1000px) {
   main {
     padding: 0 20px;
+  }
+  section{
+    flex-direction: column;
+  }
+  
+  section .nota,
+  section figure{
+    width: 100%;
+  }
+
+  section .nota{
+    margin-left: 0;
+    margin-bottom: 1em;
   }
 }
