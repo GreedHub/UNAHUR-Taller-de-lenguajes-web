@@ -1,7 +1,6 @@
 section .header{
     background-color: var(--color-accent);
     color: var(--color-text-inverted);
-    margin-top: 2em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,7 +27,7 @@ section button:hover{
 
 #turnos{
     width: 100%;
-    margin: 2em 0;
+    margin: 10px 0;
     box-sizing: border-box;
     border-collapse: collapse;
 }
