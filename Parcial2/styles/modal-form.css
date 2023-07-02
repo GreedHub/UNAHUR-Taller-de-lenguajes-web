@@ -35,6 +35,8 @@ form input[type="submit"],
 select{
     padding: 1em;
     margin-top: 1em;
+    width: 100%;
+    box-sizing: border-box;
     border: solid 2px var(--color-separador);
     border-radius: var(--radius);
 }

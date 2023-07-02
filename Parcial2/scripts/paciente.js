@@ -126,17 +126,11 @@ function AlSolicitarTurno(e) {
   const profesional = e.target.profesional.value;
   const observaciones = e.target.observaciones.value;
 
-  if (!_esEspecialidadValida(especialidad)) {
-  }
-
-  if (!_esProfesionalValido(especialidad, profesional)) {
-  }
-
-  CerrarModal('turno-modal')
-
   const turno = { fecha, hora, especialidad, profesional, observaciones };
 
   usuario.turnos.push(turno)
+
+  CerrarModal('turno-modal')
 
   e.target.fecha.value = ''
   e.target.observaciones.value = ''
