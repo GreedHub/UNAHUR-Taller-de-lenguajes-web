@@ -1,0 +1,33 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.producto-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px)
+{
+    .producto-grid {
+        grid-template-columns: repeat(2,1fr);  
+    }
+}
+    
+@media screen and (max-width: 480px)
+{
+    .producto-grid {
+        grid-template-columns:1fr;  
+    }
+}
+
+.producto-item {
+    padding: 10px;
+    border: 2px solid #ccc;
+    text-align: center;
+}
+
+.prod-img {
+    height: 200px;
+}
