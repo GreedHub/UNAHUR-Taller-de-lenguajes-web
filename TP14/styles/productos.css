@@ -21,8 +21,8 @@ main #title{
 
 .producto:hover{
     cursor: pointer;
-    -webkit-box-shadow: 0 25px 20px 0 rgba(0,0,0,.16), 0 -1px 2px 0 rgba(0,0,0,.1);
-    box-shadow: 0 25px 20px 0 rgba(0,0,0,.16), 0 -1px 2px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 25px 20px 0 var(--color-shadow-strong), 0 -1px 2px 0 var(--color-shadow-soft);
+    box-shadow: 0 25px 20px 0 var(--color-shadow-strong), 0 -1px 2px 0 var(--color-shadow-soft);
 }
 
 .producto__img {

@@ -4,10 +4,9 @@
   --color-background-footer: #42A9CB;
   --color-background-card: #FFF;
   --color-text: #3c3c3c;
-  --color-text-strong: #002345;
   --color-text-inverted: #fff;
-  --color-separador: #ebebeb;
-  --color-accent: #5c85a1;
+  --color-shadow-soft: rgba(0,0,0,.1);
+  --color-shadow-strong: rgba(0,0,0,.16);
   --radius: 6px;
 }
 
@@ -43,8 +42,4 @@ main {
   padding: 2em 40px;
   box-sizing: border-box;
   transition: padding 0.5s ease-in-out;
-}
-
-main article {
-  width: 100%;
 }
