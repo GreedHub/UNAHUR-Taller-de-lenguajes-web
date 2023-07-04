@@ -1,0 +1,39 @@
+header{
+    grid-area: header;
+    height: 60px;
+    background-color: var( --color-background-header);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header a{
+    color: var(--color-text-inverted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+header a#title{
+    float: left;
+    font-size: 1.2em;
+    vertical-align: middle;
+    height: 100%;
+    max-width: 200px;
+    margin-right: 10px;
+}
+
+header a#title img{
+    height: 35px;
+    margin-right: 10px;
+}
+
+header nav{
+    float: right;
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+header nav #cambiar-tema{
+    color: yellow;
+}

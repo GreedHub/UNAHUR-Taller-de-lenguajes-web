@@ -40,7 +40,7 @@ const productos = [
 ];
 
 function _mostrarProductos() {
-  const prodsContainer = document.getElementById("productos-container");
+  const prodsContainer = document.getElementById("productos");
   prodsContainer.innerHTML = _crearProductos();
 }
 
@@ -48,11 +48,13 @@ function _crearProductos() {
   return productos.reduce(
     (productos, prod) =>
       productos +
-      `<div class="producto-item">
-            <h2>${prod.nombre}</h2>
-            <img class="prod-img" src="./img/productos/${prod.img}" alt="${prod.nombre}">
-            <p>${prod.descripcion}</p>
-            <p>Precio: $ ${prod.precio}</p>
+      `<div class="producto">
+            <img class="producto__img" src="./img/productos/${prod.img}" alt="${prod.nombre}">
+            <div class="producto__info">
+                <h2 class="producto__titulo">${prod.nombre}</h2>
+                <p class="producto__descripcion">${prod.descripcion}</p>
+                <p class="producto__precio">$ ${prod.precio.toLocaleString('es-AR')}</p>
+            </div>
         </div>`,
     ""
   );
