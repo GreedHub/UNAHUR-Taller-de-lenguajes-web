@@ -45,13 +45,15 @@ function _mostrarProductos() {
 }
 
 function _crearProductos() {
-  return productos.reduce((productos, prod) => 
+  return productos.reduce(
+    (productos, prod) =>
       productos +
       `<div class="producto-item">
             <h2>${prod.nombre}</h2>
             <img class="prod-img" src="./img/productos/${prod.img}" alt="${prod.nombre}">
             <p>${prod.descripcion}</p>
             <p>Precio: $ ${prod.precio}</p>
-        </div>`
-    , "");
+        </div>`,
+    ""
+  );
 }
